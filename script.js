@@ -4,7 +4,7 @@ let epList = document.getElementById("episodeList");
 let videoplayer = document.getElementById("videoPlayer");
 
 searchBtn.addEventListener("click",  () => {
-    fetch("https://anime-library-web.herokuapp.com/api/" + input.value)
+    fetch("//anime-library-web.herokuapp.com/api/" + input.value)
     .then(response => {
         return response.json();
     })
@@ -38,7 +38,7 @@ async function handleHrefClick() {
     delay(1000)
     //alert(link)
 
-    fetch("https://anime-library-web.herokuapp.com/apiVideo/" + link)
+    fetch("//anime-library-web.herokuapp.com/apiVideo/" + link)
     .then(response => {
         return response.text();
     })
