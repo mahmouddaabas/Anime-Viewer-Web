@@ -1,12 +1,10 @@
 const express = require('express');
 const app = express();
 const anime = require('./scrapeanime');
+const cors = require('cors')
 const port = process.env.PORT || 3001;
 
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*"); //enable cors
-    next();
-});
+app.use(cors());
 
 app.get('/api/:keyword', async (request, response) => {
     console.log('Fetching episodes.')
