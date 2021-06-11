@@ -14,13 +14,20 @@ searchBtn.addEventListener("click",  () => {
 });
 
 function createEpList(data){
-    let counter = data.length;
+    let counter;
+    if(Array.from(data).indexOf("conan")){ //if contains conan counter + 2 because 2 episodes are missing.
+        counter = data.length + 2;
+    }
+    else {
+        counter = data.length;
+    }
+
     for(i in data){
         let li = document.createElement('li')
         let a = document.createElement('a')
         a.text = "Episode: " + counter--;
         a.href = "#"+data[i]
-        a.id = "Nmbr"+i
+        a.id = "Nmbr" + i
         li.appendChild(a)
         epList.appendChild(li)
 

@@ -50,7 +50,7 @@ main video {
     position: fixed;
     align-items: center;
     right: 42%;
-    bottom: 80%;
+    top: 90%;
 }
 
 ul li a {
