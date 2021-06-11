@@ -1,0 +1,66 @@
+body {
+    background-color: black;
+    background-image: url('rainfall.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+nav h1 {
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-left: 35px;
+}
+
+main iframe {
+    display: flex;
+    align-items: center;
+}
+
+main ul {
+    max-height: 860px;
+    max-width: 200px;
+    overflow: auto;
+    background-color: transparent;
+}
+
+main li {
+    height: 50px;
+    width: 60;
+    font-size: 18px;
+    margin-left: 30px;
+    list-style-type: none;
+}
+
+main video {
+    position: fixed;
+    align-items: center;
+    margin: auto;
+    top: 20%;
+    right: 25%;
+}
+
+.divinput {
+    position: fixed;
+    align-items: center;
+    right: 42%;
+    bottom: 80%;
+}
+
+ul li a {
+    width: 50px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+.searchBtn {
+    margin-left: 35%;
+    margin-top: 5%;
+}
