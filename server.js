@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const anime = require('./scrapeanime');
+const port = process.env.PORT || 3001;
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*"); //enable cors
@@ -31,8 +32,8 @@ app.get('/apiVideo/:episode', async (request, response) => {
 
 
 
-app.listen(3001, () => {
-    console.log('Listening on port 3001')
+app.listen(port, () => {
+    console.log('Listening on port: ' + port)
 });
 
 function delay(timeout) { //method to issue a delay
