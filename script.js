@@ -14,6 +14,7 @@ searchBtn.addEventListener("click",  () => {
 });
 
 function createEpList(data){
+    epList.innerHTML = ""; //empty list before adding new episodes
     let counter = data.length;
     for(i in data){
         let li = document.createElement('li')
@@ -48,9 +49,3 @@ async function handleHrefClick() {
 function insertVideo(data) {
     videoplayer.setAttribute("src", data)
 }
-
-function delay(timeout) { //method to issue a delay
-    return new Promise((resolve) => {
-      setTimeout(resolve, timeout);
-    });
-  }
