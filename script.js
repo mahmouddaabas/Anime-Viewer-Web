@@ -31,7 +31,7 @@ function createEpList(data){
 async function handleHrefClick() {
     let link = this.href //gets clicked link href
     link = link.split("/")
-    for(var i = 0; i < 6; i++){
+    for(var i = 0; i < 6; i++){ //adjust the number of loops depending how many / the url has
         link.shift() //remove everything except last part of url
     }
     //alert(link)
