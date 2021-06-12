@@ -31,10 +31,10 @@ function createEpList(data){
 async function handleHrefClick() {
     let link = this.href //gets clicked link href
     link = link.split("/")
-    for(var i = 0; i < 5; i++){
+    for(var i = 0; i < 6; i++){
         link.shift() //remove everything except last part of url
     }
-    alert(link)
+    //alert(link)
 
     fetch("https://anime-library-web.herokuapp.com/apiVideo/" + link)
     .then(response => {
