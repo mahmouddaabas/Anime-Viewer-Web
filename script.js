@@ -29,12 +29,13 @@ function createEpList(data){
 }
 
 async function handleHrefClick() {
-    let link = [];
+    let link = "";
     link = this.href //gets clicked link href
-    link = link.split("/")
+    link = link.replace("https://mahmouddaabas.github.io/Anime-Viewer-Web/#/watch/", "")
+    /*link = link.split("/")
     for(var i = 0; i < 5; i++){
         link.shift() //remove everything except last part of url
-    }
+    }*/
     //alert(link)
 
     fetch("https://anime-library-web.herokuapp.com/apiVideo/" + link)
