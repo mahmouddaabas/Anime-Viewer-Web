@@ -27,14 +27,6 @@ app.get('/apiVideo/:episode', async (request, response) => {
     response.send(data)
 });
 
-
-
 app.listen(port, () => {
     console.log('Listening on port: ' + port)
 });
-
-function delay(timeout) { //method to issue a delay
-    return new Promise((resolve) => {
-      setTimeout(resolve, timeout);
-    });
-  }

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+body {
+    font-family: 'Kaushan', cursive;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('main-bg.gif');
+    background-size: 100%, auto;
+    font-weight: bold;
+    color: white;
+}
+
+header p {
+    position: relative;
+    top: 80px;
+    left: 350px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    position: relative;
+    top: 400px;
+    right: 40px;
+    display: flex;
+    border: none;
+    border-radius: 7px;
+}
+
+.divOptions a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.movieClass {
+    margin: 200px;
+}
