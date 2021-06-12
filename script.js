@@ -48,7 +48,6 @@ async function handleHrefClick() {
 
 function insertVideo(data) {
     videoplayer.setAttribute("src", data)
-    videoplayer.onplay();
 }
 
 function delay(timeout) { //method to issue a delay
