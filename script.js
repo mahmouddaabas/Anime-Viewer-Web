@@ -35,7 +35,6 @@ async function handleHrefClick() {
     for(var i = 0; i < 5; i++){
         link.shift() //remove everything except last part of url
     }
-    delay(1000)
     //alert(link)
 
     fetch("https://anime-library-web.herokuapp.com/apiVideo/" + link)

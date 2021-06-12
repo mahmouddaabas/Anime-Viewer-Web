@@ -19,7 +19,6 @@ app.get('/api/:keyword', async (request, response) => {
 app.get('/apiVideo/:episode', async (request, response) => {
     console.log('Fetching video.')
     var episode = "https://www7.animeseries.io/watch/" + request.params.episode;
-    await delay(1500)
     console.log(episode)
 
     let data = await anime.animeVideo(episode)
