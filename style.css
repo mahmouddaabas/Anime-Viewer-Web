@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 body {
+    font-family: 'Kaushan', cursive;
     background-color: black;
     background-image: url('anime-bg.gif');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%, auto;
 }
 
 header {
@@ -24,10 +27,10 @@ main iframe {
 }
 
 main ul {
-    max-height: 860px;
+    position: relative;
+    max-height: 850px;
     max-width: 200px;
     overflow: auto;
-    background-color: transparent;
 }
 
 main li {
@@ -38,18 +41,19 @@ main li {
     list-style-type: none;
 }
 
-main video {
-    position: fixed;
+
+.divvideo {
     align-items: center;
-    margin: auto;
-    top: 20%;
-    right: 25%;
+    position: fixed;
+    display: inline-block;
+    left: 500px;
+    top: 200px;
 }
 
 .divinput {
-    position: fixed;
+    position: absolute;
     align-items: center;
-    right: 42%;
+    right: 44%;
     top: 90%;
 }
 
@@ -63,4 +67,77 @@ ul li a {
 .searchBtn {
     margin-left: 35%;
     margin-top: 5%;
+}
+
+.searchBtn {
+    border: 5em;
+    cursor: pointer;
+    outline: none;
+    font-size: 12px;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+    padding: 0.7em 2em;
+    border-radius: 65px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    -webkit-transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    color: white;
+  }
+
+  .searchBtn .text {
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+  }
+
+  .searchBtn:after {
+    content: "";
+    border-radius: 18px;
+    position: absolute;
+    margin: 4px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: #0e0e10;
+  }
+
+  .searchBtn:hover {
+    background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+    box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+  }
+
+  .searchBtn:hover .text {
+    background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+  }
+
+.input {
+    background: none;
+    color: #ffffff;
+    font-size: 14px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #09d6f1;
+}
+
+.input::placeholder {
+    color: white;
+}
+
+.input:focus {
+    outline: none;
+}
+
+
+.input:focus .input:valid {
+    top: -14px;
+    font-size: 12px;
+    color: #2196f3;
+}
+
+.input[type="password"] {
+    letter-spacing: 0.3em;
 }
