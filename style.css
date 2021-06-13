@@ -47,14 +47,14 @@ main li {
     position: fixed;
     display: inline-block;
     left: 500px;
-    top: 200px;
+    top: 130px;
 }
 
 .divinput {
     position: absolute;
     align-items: center;
     right: 44%;
-    top: 90%;
+    top: 85%;
 }
 
 ul li a {
@@ -115,12 +115,12 @@ ul li a {
 .input {
     background: none;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 16px;
     display: block;
     width: 200px;
     border: none;
     border-radius: 0;
-    border-bottom: 1px solid #09d6f1;
+    border-bottom: 1px solid #8207f5;
 }
 
 .input::placeholder {
