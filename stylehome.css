@@ -35,14 +35,79 @@ body {
     color: white;
 }
 
-@media all and (max-width: 400px) {
+@media only screen and (max-width: 1366px){
+    body {
+        font-size: 45px;
+    }
 
     header {
-        margin-left: 2%;
+        width: 100%;
+        margin-left: 10%;
+        color: rgb(255, 14, 223);
     }
 
     .divOptions {
-        margin-left: 6%;
+        margin-left: 8%;
+    }
+
+    .animeClass {
+        margin: 10%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    body {
+        font-size: 38px;
+    }
+
+    header {
+        width: 100%;
+        margin-left: 10%;
+        color: rgb(255, 14, 223);
+    }
+
+    .divOptions {
+        margin-left: 8%;
+    }
+
+    .animeClass {
+        margin: 10%;
+    }
+}
+
+@media only screen and (max-width: 414px){
+    body {
+        font-size: 20px;
+    }
+
+    header {
+        width: 100%;
+        margin-left: 5%;
+        color: red;
+    }
+
+    .divOptions {
+        margin-left: 7%;
+    }
+
+    .animeClass {
+        margin: 10%;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    body {
+        font-size: 20px;
+    }
+
+    header {
+        width: 100%;
+        margin-left: 0%;
+        color: rgb(0, 60, 255);
+    }
+
+    .divOptions {
+        margin-left: 2%;
     }
 
     .animeClass {
