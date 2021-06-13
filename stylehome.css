@@ -1,40 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
-body {
-    font-family: 'Kaushan', cursive;
-    font-size: 23px;
+header {
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 8%;
+}
+
+.divOptions {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-image: url('main-bg.gif');
-    background-size: 100%, auto;
-    font-weight: bold;
-    color: white;
+    margin-left: 37%;
+    margin-top: 4%;
 }
 
-header p {
-    position: relative;
-    top: 80px;
-    left: 350px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+.animeClass {
+    margin: 6%;
 }
 
-main {
-    position: relative;
-    top: 400px;
-    right: 40px;
-    display: flex;
-    border: none;
-    border-radius: 7px;
-}
-
-.divOptions a {
+.animeClass a {
     text-decoration: none;
     color: inherit;
 }
 
-.movieClass {
-    margin: 200px;
+body {
+    background-image: url('main-bg.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    font-family: 'Kaushan', cursive;
+    font-size: 23px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+
+@media all and (max-width: 400px) {
+
+    header {
+        margin-left: 2%;
+    }
+
+    .divOptions {
+        margin-left: 6%;
+    }
+
+    .animeClass {
+        margin: 10%;
+    }
 }
