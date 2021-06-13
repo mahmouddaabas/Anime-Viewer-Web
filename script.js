@@ -48,4 +48,5 @@ async function handleHrefClick() {
 
 function insertVideo(data) {
     videoplayer.setAttribute("src", data)
+    videoplayer.autoplay = true;
 }
