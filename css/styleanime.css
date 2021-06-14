@@ -34,7 +34,7 @@ main ul {
     position: absolute;
     max-height: 90%;
     max-width: 90%;
-    width: 10%;
+    width: 20%;
     overflow: auto;
 }
 

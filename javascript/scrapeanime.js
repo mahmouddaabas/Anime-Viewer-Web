@@ -1,19 +1,33 @@
 const request = require('request-promise');
 const cheerio = require('cheerio');
 
-async function animeEpisodes(search_term){
+async function animeList(search_term) {
+
     let url = 'https://www7.animeseries.io/search?keyword=' + search_term;
 
     const response = await request(url);
 
     let $ = cheerio.load(response);
 
-    let items = $('ul.items').find('a').attr('href'); //scrape anime url
+    let length = $('#wrapper_bg > div > div.content_left > div > div > ul').find("li").length //animes in the list
+    //console.log(length)
 
-    let animeurl = 'https://www7.animeseries.io' + items;
-    //console.log(animeurl);
+    let anime_names = [];
+    for(var i = 0; i < length; i++){
+        anime_names.push($('#wrapper_bg > div > div.content_left > div > div > ul > li:nth-child('+ i +') > a > div > div > div').text()) //scrape anime names
+    }
+    anime_names.shift() //remove first element
+    //console.log(anime_names)
 
-    const response2 = await request(animeurl);
+    let anime_list = $('ul.items').find('a').get().map(x => $(x).attr('href')); //scrape all anime urls
+    anime_list.pop() //remove last element
+    //console.log(anime_list)
+
+    return [anime_names, anime_list]; //return both arrays an an array
+}
+
+async function animeEpisodes(anime_url){
+    const response2 = await request(anime_url);
 
     $ = cheerio.load(response2);
 
@@ -24,20 +38,10 @@ async function animeEpisodes(search_term){
     return episodes
 }
 
-async function animeInfo(search_term) {
-    let url = 'https://www7.animeseries.io/search?keyword=' + search_term;
+async function animeInfo(anime_url) {
+    const response2 = await request(anime_url); //request anime url
 
-    const response = await request(url);
-
-    let $ = cheerio.load(response); //request search page url
-
-    let halfurl = $('ul.items').find('a').attr('href'); //scrape anime url
-
-    let animeurl = 'https://www7.animeseries.io' + halfurl;
-
-    const response2 = await request(animeurl); //request anime url
-
-    $ = cheerio.load(response2)
+    const $ = cheerio.load(response2)
 
     let infolist = [];
 
@@ -92,6 +96,7 @@ async function animeVideo(url) {
 }
 
 module.exports = {
+    animeList,
     animeEpisodes,
     animeVideo,
     animeInfo

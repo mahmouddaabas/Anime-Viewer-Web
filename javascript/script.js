@@ -2,6 +2,7 @@ let searchBtn = document.getElementById("searchBtnID");
 let input = document.getElementById("inputID");
 let epList = document.getElementById("episodeList");
 let videoplayer = document.getElementById("videoPlayer");
+let header = document.getElementById("header");
 
 let animeImage = document.getElementById('animeImageID');
 let animeDescription = document.getElementById('animeDescriptionID');
@@ -13,22 +14,53 @@ let animeReleased = document.getElementById('animeReleasedID');
 let animeGenre = document.getElementById('animeGenreID');
 
 searchBtn.addEventListener("click",  () => {
-    fetch('https://anime-library-web.herokuapp.com/animeInfo/' + input.value) //fetch info
+    fetch('https://anime-library-web.herokuapp.com/animeSearch/' + input.value) //fetch animelist
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        createAnimeList(data)
+    })
+});
+
+function createAnimeList(data) {
+    header.textContent = "Anime List"
+    epList.innerHTML = ""; //empty list before adding new animes
+    for(i in data[0]){
+        let li = document.createElement('li')
+        let a = document.createElement('a')
+        a.text = data[0][i]
+        a.href = "#"+data[1][i]
+        li.appendChild(a)
+        epList.appendChild(li)
+
+        a.addEventListener("click", handleAnimeClick) //add eventlistener to all a elements
+}
+}
+
+async function handleAnimeClick(){
+    let link = this.href
+    link = link.split("/")
+    for(var i = 0; i < 6; i++){ //adjust the number of loops depending how many / the url has
+        link.shift() //remove everything except last part of url
+    }
+
+    fetch('https://anime-library-web.herokuapp.com/animeInfo/' + link) //fetch info
     .then(response => {
         return response.json();
     })
     .then(data => {
         addAnimeInfo(data)
     })
-    
-    return fetch("https://anime-library-web.herokuapp.com/animeSearch/" + input.value) //fetch episodes
+
+    return fetch('https://anime-library-web.herokuapp.com/animeEpisodes/' + link) //fetch episodes
     .then(response => {
         return response.json();
     })
     .then(data => {
         createEpList(data)
-    });
-});
+    })
+}
 
 function addAnimeInfo(data) {
     animeImage.setAttribute("src", data[0]);
@@ -42,6 +74,7 @@ function addAnimeInfo(data) {
 }
 
 function createEpList(data){
+    header.textContent = "Episode List"
     epList.innerHTML = ""; //empty list before adding new episodes
     let counter = data.length;
     for(i in data){
@@ -65,7 +98,7 @@ async function handleHrefClick() {
     }
     //alert(link)
 
-    fetch("https://anime-library-web.herokuapp.com/animeVideo/" + link)
+    fetch("https://anime-library-web.herokuapp.com/animeVideo/" + link) //fetch video for anime
     .then(response => {
         return response.text();
     })
