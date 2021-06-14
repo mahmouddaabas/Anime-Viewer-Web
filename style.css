@@ -65,6 +65,21 @@ ul li a {
     text-decoration: none;
 }
 
+.animeinfo {
+    font-size: 12px;
+    position: absolute;
+    float: right;
+    right: 3%;
+    display: grid;
+    width: 20%;
+    word-wrap: break-word;
+}
+
+.animeImageClass {
+    width: 70%;
+    height: 100%
+}
+
 .searchBtn {
     margin-left: 6%;
     margin-top: 2%;

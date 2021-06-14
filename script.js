@@ -3,8 +3,25 @@ let input = document.getElementById("inputID");
 let epList = document.getElementById("episodeList");
 let videoplayer = document.getElementById("videoPlayer");
 
+let animeImage = document.getElementById('animeImageID');
+let animeDescription = document.getElementById('animeDescriptionID');
+let animeTitle = document.getElementById('animeTitleID');
+let animeAltName = document.getElementById('animeAltNameID');
+let animeCountry = document.getElementById('animeCountryID');
+let animeStatus = document.getElementById('animeStatusID');
+let animeReleased = document.getElementById('animeReleasedID');
+let animeGenre = document.getElementById('animeGenreID');
+
 searchBtn.addEventListener("click",  () => {
-    fetch("https://anime-library-web.herokuapp.com/api/" + input.value)
+    fetch('https://anime-library-web.herokuapp.com/animeInfo/' + input.value) //fetch info
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        addAnimeInfo(data)
+    })
+    
+    return fetch("https://anime-library-web.herokuapp.com/animeSearch/" + input.value) //fetch episodes
     .then(response => {
         return response.json();
     })
@@ -12,6 +29,17 @@ searchBtn.addEventListener("click",  () => {
         createEpList(data)
     });
 });
+
+function addAnimeInfo(data) {
+    animeImage.setAttribute("src", data[0]);
+    animeTitle.textContent = data[1];
+    animeDescription.textContent = data[2];
+    animeAltName.textContent = data[3];
+    animeCountry.textContent = data[4];
+    animeStatus.textContent = data[5];
+    animeReleased.textContent = data[6];
+    animeGenre.textContent = data[7];
+}
 
 function createEpList(data){
     epList.innerHTML = ""; //empty list before adding new episodes
@@ -37,7 +65,7 @@ async function handleHrefClick() {
     }
     //alert(link)
 
-    fetch("https://anime-library-web.herokuapp.com/apiVideo/" + link)
+    fetch("https://anime-library-web.herokuapp.com/animeVideo/" + link)
     .then(response => {
         return response.text();
     })
