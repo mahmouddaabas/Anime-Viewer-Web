@@ -41,7 +41,7 @@ function createAnimeList(data) {
 async function handleAnimeClick(){
     let link = this.href
     link = link.split("/")
-    for(var i = 0; i < 6; i++){ //adjust the number of loops depending how many / the url has
+    for(var i = 0; i < 7; i++){ //adjust the number of loops depending how many / the url has
         link.shift() //remove everything except last part of url
     }
 
