@@ -267,6 +267,11 @@ ul li a {
         height: 60%;
     }
 
+    .animeDescriptionClass {
+        overflow: auto;
+        max-height: 90%;
+    }
+
     .videoPlayer {
         margin-top: 110%;
         margin-left: 10%;
@@ -324,6 +329,11 @@ ul li a {
         margin-top: 10%;
         width: 60%;
         height: 60%;
+    }
+
+    .animeDescriptionClass {
+        overflow: auto;
+        max-height: 80%;
     }
 
     .videoPlayer {
