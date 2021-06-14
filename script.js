@@ -32,13 +32,13 @@ searchBtn.addEventListener("click",  () => {
 
 function addAnimeInfo(data) {
     animeImage.setAttribute("src", data[0]);
-    animeTitle.textContent = data[1];
+    animeTitle.textContent = "Title: " + data[1];
     animeDescription.textContent = data[2];
-    animeAltName.textContent = data[3];
-    animeCountry.textContent = data[4];
-    animeStatus.textContent = data[5];
-    animeReleased.textContent = data[6];
-    animeGenre.textContent = data[7];
+    animeAltName.textContent = "Other names: " + data[3];
+    animeCountry.textContent = "Country: " + data[4];
+    animeStatus.textContent = "Status: " + data[5];
+    animeReleased.textContent = "Released: " + data[6];
+    animeGenre.textContent = "Genre: " + data[7];
 }
 
 function createEpList(data){
