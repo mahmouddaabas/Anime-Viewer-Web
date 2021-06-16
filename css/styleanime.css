@@ -158,6 +158,14 @@ ul li a {
     letter-spacing: 0.3em;
 }
 
+.footer {
+    width: 20%;
+    height: 2%;
+    position: absolute;
+    left: 43%;
+    top: 95%;
+}
+
 @media only screen and (max-width: 1024px){
     header {
         position: absolute;
