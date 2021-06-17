@@ -9,6 +9,14 @@ $(document).ready(() => {
 
     $("a").on("click", handleHrefClick) //add eventlistener to all the a elements
 
+     var vid = document.getElementById("videoPlayer");
+     vid.currentTime = localStorage.getItem("current_time"); //set stored last time
+
+     $(window).bind('beforeunload', function(){ //save current time of the video before closing page
+        var currentTime = vid.currentTime;
+        localStorage.setItem("current_time", currentTime)
+      });
+
     $("#searchBtnID").on("click", () => {
         fetch('https://anime-library-web.herokuapp.com/animeSearch/' + $("input").val()) //fetch animelist
         .then(response => {
