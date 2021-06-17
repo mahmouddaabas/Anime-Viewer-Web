@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const anime = require('./scrapeanime');
+const movie = require('./scrapemovie');
 const cors = require('cors');
 const port = process.env.PORT || 3001;
 
@@ -47,6 +48,16 @@ app.get('/animeVideo/:episode', async (request, response) => {
     console.log(data)
 
     response.send(data)
+});
+
+app.get('/movieSearch/:name', async (request, response) => {
+    console.log('Fetching all movies.')
+    const keyword = request.params.name;
+    //console.log(keyword)
+
+    let data = await movie.moviesearch(keyword);
+    console.log(data)
+    response.send(data) //data has 2 arrays
 });
 
 app.listen(port, () => {

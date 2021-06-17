@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Library</title>
+    <script src="../javascript/jquery.js"></script>
+    <script src="../javascript/scriptmovie.js"></script>
+    <link rel='stylesheet' href="../css/stylemovie.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1 id="header">Movie List</h1>
+        </nav>
+    </header>
+
+    <main>
+
+        <ul id="episodeList"></ul>
+
+        <div id="animeInfoID" class="animeinfo">
+            <img class="animeImageClass" id="animeImageID" src="../pictures/empty_black_space.png">
+            <br>
+            <label id="animeTitleID"></label>
+            <br>
+            <label id="animeAltNameID"></label>
+            <br>
+            <label id="animeCountryID"></label>
+            <br>
+            <label id="animeStatusID"></label>
+            <br>
+            <label id="animeReleasedID"></label>
+            <br>
+            <label id="animeGenreID"></label>
+            <br>
+            <label class="animeDescriptionClass" id="animeDescriptionID"></label>
+        </div>
+
+        <div class="divvideo">
+            <iframe width="900px" height="600px" frameborder="0" allowfullscreen="" src=""></iframe>
+        </div>
+
+          <div class="divinput">
+            <input id= "inputID" class="input" placeholder="Movie/TV-show name">
+            <br>
+            <button id="searchBtnID" class="searchBtn">Search</button>
+          </div>
+
+          <footer id="footerID" class="footer"></footer>
+
+    </main>
+
+</body>
+</html>
