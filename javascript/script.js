@@ -86,6 +86,7 @@ $(document).ready(() => {
     }
 
     async function handleHrefClick() {
+        vid.currentTime = 0; //reset the video time when an episode is clicked.
         let link = this.href //gets the clicked link href
         let current_episode = this.text //gets the clicked link text
         setCurrentEpisode(current_episode)
