@@ -78,21 +78,9 @@ async function animeVideo(url) {
 
     let $ = cheerio.load(response);
 
-    let dlpageurl = $('div.plugins').find('ul').find('li').find('a').get().map(x => "https:" + $(x).attr('href')); //scrape dl page link
-    //console.log(dlpageurl)
+    let embed_link = $("#wrapper_bg > div.content > div.video_watch > div > div.watch_player > div.ver > div.watch_video.watch-iframe > iframe").attr("src")
 
-    dlpageurl = dlpageurl.filter(s => ~s.indexOf("streamani")) //removes anything that doesnt match "streamani"
-
-    const response2 = await request(dlpageurl[0]);
-
-    dlpageurl = [];
-
-    $ = cheerio.load(response2)
-
-    let dlurl = $('div.dowload').find('a').attr("href") //get mp4 url
-    //console.log(dlurl)
-
-    return dlurl
+    return embed_link
 }
 
 module.exports = {
