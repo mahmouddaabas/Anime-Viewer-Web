@@ -175,175 +175,33 @@ ul li a {
 
 @media only screen and (max-width: 1024px){
     header {
-        position: absolute;
-        margin-top: -10%;
-        margin-left: -5%;
+        margin-top: 55%;
     }
-
-    body {
-        font-size: 24px;
-    }
-
-    .videoPlayer {
-        margin-top: 50%;
-        width: 100%;
-        height: auto;
-    }
-
-    .divvideo {
-        margin-right: 25%;
-        margin-top: 20%;
-    }
-
-    .divinput {
-        margin-left: 40%;
-    }
-
-    .searchBtn {
-        margin-left: 10%;
-    }
-
     main ul {
-        margin-left: -3%;
-        max-height: 50%;
-        width: 40%;
+        margin-top: 2%;
+        height: 25%;
     }
-
-    main ul li {
-        font-size: 20px;
-    }
-}
-
-@media only screen and (max-width: 768px){
-    header {
-        position: absolute;
-        margin-top: -10%;
-        margin-left: -5%;
-    }
-
-    body {
-        font-size: 18px;
-    }
-
     .videoPlayer {
-        margin-top: 50%;
-        width: 100%;
-        height: auto;
+        margin-top: 35%;
+        width: 55%;
+        margin-left: -2%;
     }
-
-    .divvideo {
-        margin-right: 25%;
-        margin-top: 20%;
-    }
-
     .divinput {
+        margin-top: -2%;
         margin-left: 40%;
-    }
-
-    .searchBtn {
-        margin-left: 10%;
-    }
-
-    main ul {
-        max-height: 50%;
-        width: 20%;
-        margin-left: -4%;
-    }
-
-    main ul li {
-        font-size: 18px;
-    }
-}
-
-@media only screen and (max-width: 414px){
-    header {
-        position: absolute;
-        margin-top: 75%;
-        margin-left: -13%;
-    }
-
-    body {
-        font-size: 12px;
     }
 
     .animeinfo {
-        position: absolute;
-        left: 45%;
-        top: -0%;
-        font-size: 10px;
-        width: 50%;
+        margin-top: -60%;
+        margin-right: 30%;
     }
 
     .animeImageClass {
         position: absolute;
-        margin-left: -80%;
+        margin-left: -120%;
         margin-top: 10%;
-        width: 60%;
-        height: 60%;
-    }
-
-    .animeDescriptionClass {
-        overflow: auto;
-        max-height: 90%;
-    }
-
-    .videoPlayer {
-        margin-top: 110%;
-        margin-left: 10%;
-        width: 90%;
-        height: auto;
-    }
-
-    .divvideo {
-        margin-right: 0%;
-        margin-top: 20%;
-    }
-
-    .divinput {
-        margin-left: 40%;
-    }
-
-    .searchBtn {
-        margin-left: 27%;
-    }
-
-    main ul {
-        margin-top: 90%;
-        max-height: 40%;
-        width: 30%;
-        margin-left: -15%;
-    }
-
-    main ul li {
-        font-size: 12px;
-    }
-}
-
-@media only screen and (max-width: 375px){
-    header {
-        position: absolute;
-        margin-top: 85%;
-        margin-left: -16%;
-    }
-
-    body {
-        font-size: 12px;
-    }
-
-    .animeinfo {
-        position: absolute;
-        left: 45%;
-        top: -0%;
-        font-size: 10px;
-        width: 50%;
-    }
-
-    .animeImageClass {
-        position: absolute;
-        margin-left: -80%;
-        margin-top: 10%;
-        width: 60%;
-        height: 60%;
+        width: 100%;
+        height: 100%;
     }
 
     .animeDescriptionClass {
@@ -351,33 +209,164 @@ ul li a {
         max-height: 80%;
     }
 
+    .footer {
+        margin-top: -70%;
+        margin-left: -6%;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    header {
+        margin-top: 60%;
+        margin-left: -5%;
+    }
+    main ul {
+        margin-top: 2%;
+        height: 24%;
+        margin-left: -5%;
+    }
     .videoPlayer {
-        margin-top: 125%;
-        width: 90%;
-        height: auto;
+        margin-top: 35%;
+        width: 55%;
+        margin-left: -2%;
     }
-
-    .divvideo {
-        margin-right: 0%;
-        margin-top: 20%;
-    }
-
     .divinput {
+        margin-top: -4%;
         margin-left: 40%;
     }
 
-    .searchBtn {
-        margin-left: 27%;
+    .animeinfo {
+        margin-top: -65%;
+        margin-right: 30%;
     }
 
-    main ul {
+    .animeImageClass {
+        position: absolute;
+        margin-left: -100%;
+        margin-top: 10%;
+        width: 80%;
+        height: 60%;
+    }
+
+    .animeDescriptionClass {
+        overflow: auto;
+        max-height: 40%;
+    }
+
+    .footer {
+        margin-top: -70%;
+        margin-left: -13%;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 414px){
+    header {
         margin-top: 100%;
-        max-height: 35%;
-        width: 30%;
-        margin-left: -18%;
+        margin-left: -10%;
+        font-size: 12px;
+    }
+    main ul {
+        margin-top: 2%;
+        height: 24%;
+        margin-left: -10%;
     }
 
     main ul li {
+        font-size: 12px;
+    }
+
+    .videoPlayer {
+        margin-top: 55%;
+        width: 55%;
+        margin-left: 10%;
+    }
+
+    .divinput {
+        margin-top: 20%;
+        margin-left: 40%;
+    }
+
+    .animeinfo {
+        margin-top: -100%;
+        margin-right: 10%;
+        font-size: 8px;
+        width: 30%;
+    }
+
+    .animeImageClass {
+        position: absolute;
+        margin-left: -120%;
+        margin-top: 10%;
+        width: 100%;
+        height: 50%;
+    }
+
+    .animeDescriptionClass {
+        overflow: auto;
+        max-height: 20%;
+    }
+
+    .footer {
+        margin-top: -82%;
+        margin-left: -10%;
+        width: 60%;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    header {
+        margin-top: 140%;
+        margin-left: -15%;
+        font-size: 12px;
+    }
+    main ul {
+        margin-top: 2%;
+        height: 24%;
+        margin-left: -15%;
+    }
+
+    main ul li {
+        font-size: 12px;
+    }
+
+    .videoPlayer {
+        margin-top: 80%;
+        width: 55%;
+        margin-left: 15%;
+    }
+
+    .divinput {
+        margin-top: 30%;
+        margin-left: 40%;
+    }
+
+    .animeinfo {
+        margin-top: -140%;
+        margin-right: 10%;
+        font-size: 8px;
+        width: 30%;
+    }
+
+    .animeImageClass {
+        position: absolute;
+        margin-left: -120%;
+        margin-top: 10%;
+        width: 100%;
+        height: 50%;
+    }
+
+    .animeDescriptionClass {
+        overflow: auto;
+        max-height: 20%;
+    }
+
+    .footer {
+        margin-top: -90%;
+        margin-left: -10%;
+        width: 65%;
         font-size: 12px;
     }
 }
