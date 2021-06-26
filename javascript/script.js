@@ -74,7 +74,6 @@ $(document).ready(() => {
         $("a").on("click", handleHrefClick) //add eventlistener to the "a" element.
 
         localStorage.setItem("last_viewed_anime_episodes", $("#episodeList").html())
-        window.location.reload() //reloads the page
     }
 
     async function handleHrefClick() {
