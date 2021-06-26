@@ -2,7 +2,7 @@ $(document).ready(() => {
     //sets all the saved elements back on the page from the local storage.
     $("#videoPlayer").attr("src", localStorage.getItem("last_played_video"))
     window.location.replace("#" + localStorage.getItem("last_clicked_url"))
-    $("#animeInfoID").html(localStorage.getItem("last_anime_info"))
+    $(".animeinfo").html(localStorage.getItem("last_anime_info"))
     $("#header").text("Episode List")
     $("#episodeList").html(localStorage.getItem("last_viewed_anime_episodes"))
     $("#footerID").text(localStorage.getItem("current_episode"))
@@ -61,7 +61,7 @@ $(document).ready(() => {
          $("#animeStatusID").text("Status: " + data[5])
          $("#animeReleasedID").text("Released: " + data[6])
          $("#animeGenreID").text("Genre: " + data[7])
-         localStorage.setItem("last_anime_info", $("#animeInfoID").html())
+         localStorage.setItem("last_anime_info", $(".animeinfo").html())
     }
 
     function createEpList(data){
