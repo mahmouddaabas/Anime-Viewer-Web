@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 
 async function animeList(search_term) {
 
-    let url = 'https://www7.animeseries.io/search?keyword=' + search_term;
+    let url = 'https://www.animeseries.so/search?keyword=' + search_term;
 
     const response = await request(url);
 
@@ -31,7 +31,7 @@ async function animeEpisodes(anime_url){
 
     $ = cheerio.load(response2);
 
-    //let episodes = $('div.list_episode').find('ul').find('li').find('a').get().map(x => "https://www7.animeseries.io" + $(x).attr('href')); //scrape episodes and put them in a map
+    //let episodes = $('div.list_episode').find('ul').find('li').find('a').get().map(x => "https://www.animeseries.so" + $(x).attr('href')); //scrape episodes and put them in a map
     let episodes = $('div.list_episode').find('ul').find('li').find('a').get().map(x => $(x).attr('href')); //scrape episodes and put them in a map
     //console.log(episodes);
 

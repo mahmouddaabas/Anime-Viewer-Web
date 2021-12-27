@@ -19,7 +19,7 @@ app.get('/animeSearch/:name', async (request, response) => {
 
 app.get('/animeInfo/:info', async (request, response) => {
     console.log('Fetching information.')
-    const url = "https://www7.animeseries.io/anime/" + request.params.info;
+    const url = "https://www.animeseries.so/anime/" + request.params.info;
     //console.log(url)
 
     let data = await anime.animeInfo(url)
@@ -30,7 +30,7 @@ app.get('/animeInfo/:info', async (request, response) => {
 
 app.get('/animeEpisodes/:url', async (request, response) => {
     console.log('Fetching episodes.')
-    const url = "https://www7.animeseries.io/anime/" + request.params.url;
+    const url = "https://www.animeseries.so/anime/" + request.params.url;
     //console.log(url)
 
     let data = await anime.animeEpisodes(url);
@@ -40,7 +40,7 @@ app.get('/animeEpisodes/:url', async (request, response) => {
 
 app.get('/animeVideo/:episode', async (request, response) => {
     console.log('Fetching video.')
-    var episode = "https://www7.animeseries.io/watch/" + request.params.episode;
+    var episode = "https://www.animeseries.so/watch/" + request.params.episode;
     //console.log(episode)
 
     let data = await anime.animeVideo(episode)
